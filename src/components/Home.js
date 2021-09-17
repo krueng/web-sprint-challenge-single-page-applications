@@ -14,11 +14,11 @@ history.push('/pizza');
         src='Pizza.jpg'
         alt='Yummi pizza'
       />
-      <button
+      <button id='order-pizza'
         onClick={routeToShop}
         className='md-button shop-button'
       >
-        Shop now!
+        Order!
       </button>
     </div>
   )
