@@ -9,8 +9,7 @@ let formSchema = yup.object().shape({
 
     email: yup
         .string()
-        .email('Must be a valid email address!')
-        .required('Email is required!'),
+        .email('Must be a valid email address!'),
 
     size: yup
         .string()
@@ -38,7 +37,7 @@ let formSchema = yup.object().shape({
 
 formSchema = formSchema.test( // this test is added additional to any other (build-in) tests
   'chooseTopping',
-  null, // we'll return error message ourself if needed
+  null, // we'll return error message ourselves if needed
   (obj) => {
     // only testing the checkboxes here
     if ( obj.topping1 || obj.topping2 || obj.topping3 ||  obj.topping4 || obj.topping5 ) {

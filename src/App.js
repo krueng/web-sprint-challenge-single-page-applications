@@ -6,8 +6,6 @@ import axios from 'axios';
 import formSchema from './validations/formSchema';
 import * as yup from 'yup';
 
-// const toppings = ['Green Pepper','Diced Tomatoes','Black Olives','Three Cheese','Extra Cheese'];
-// toppings.forEach((topping, idx) => `topping${idx}: true` )
 const initialFormValues = {
   name: '',
   email: '',
@@ -46,7 +44,6 @@ const App = () => {
       .post('https://reqres.in/api/orders', newOrder)
       .then(res => {
         setOrders([res.data, ...orders]);
-        console.log('POSTing', [res.data, ...orders])
         setFormValues(initialFormValues)
       })
       .catch(err => {
@@ -70,24 +67,15 @@ const App = () => {
   }
   const formSubmit = () => {
     const newOrder = {
-      // email: formValues.email.trim(),
       name: formValues.name.trim(),
       size: formValues.size,
-      // topping1: formValues.topping1,
-      // topping2: formValues.topping2,
-      // topping3: formValues.topping3,
-      // topping4: formValues.topping4,
-      // topping5: formValues.topping5,
+      topping1: formValues.topping1,
+      topping2: formValues.topping2,
+      topping3: formValues.topping3,
+      topping4: formValues.topping4,
+      topping5: formValues.topping5,
       special: formValues.special
     }
-
-    // if (formValues.topping1) newOrder.topping1 = true;
-    // if (formValues.topping2) newOrder.topping2 = true;
-    // if (formValues.topping3) newOrder.topping3 = true;
-    // if (formValues.topping4) newOrder.topping4 = true;
-    // if (formValues.topping5) newOrder.topping5 = true;
-
-    console.log('formS',newOrder)
     postNewOrder(newOrder)
   }
   useEffect(() => {
@@ -105,7 +93,6 @@ const App = () => {
           <Link id='order-pizza' to='/pizza'>Place Order</Link>
         </div>
       </nav>
-      {/* <Switch> */}
       <Route path='/pizza'>
         <OrderForm
           values={formValues}
@@ -116,7 +103,6 @@ const App = () => {
           key={orders.id}
         />
       </Route>
-      {/* </Switch> */}
       <Route exact path='/'>
         <Home />
       </Route>

@@ -54,12 +54,12 @@ Your finished project must include all of the following requirements:
 - [x] A homepage that has a "/" route and links to your form (button, nav bar, or any other type of link is acceptable but must have an id of "order-pizza")
 - [x] A order form that has a "/pizza" route and shows the form
 - [x] A form with an id of "pizza-form"
-- [ ] A name text input field with an id of "name-input"
-- [ ] Validation for name and the error message is "name must be at least 2 characters" (Use this exact error message to make sure tests pass)
-- [ ] A dropdown for pizza size with an id of "size-dropdown"
-- [ ] A checklist for toppings - at least 4 (hint: name each separately!)
-- [ ] Text input for special instructions with an id of "special-text"
-- [ ] An Add to Order button that has an id of "order-button" and that submits form and returns a database record of name, size, toppings and special instructions
+- [x] A name text input field with an id of "name-input"
+- [x] Validation for name and the error message is "name must be at least 2 characters" (Use this exact error message to make sure tests pass)
+- [x] A dropdown for pizza size with an id of "size-dropdown"
+- [x] A checklist for toppings - at least 4 (hint: name each separately!)
+- [x] Text input for special instructions with an id of "special-text"
+- [x] An Add to Order button that has an id of "order-button" and that submits form and returns a database record of name, size, toppings and special instructions
 
 Data should look something like
 ```
@@ -74,15 +74,15 @@ Data should look something like
 where there is a key for name, size and special and they are strings
 and
 there is a key for each of the toppings and they are booleans
-(Note - your payload should look similar to the about data)
+(Note - your payload should look similar to the above data)
 
 #### Testing MVP
 
 Implement the following tests in Cypress:
 
-- [ ] test that you can add text to the box
-- [ ] test that you can select multiple toppings
-- [ ] test that you can submit the form
+- [x] test that you can add text to the box
+- [x] test that you can select multiple toppings
+- [x] test that you can submit the form
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
@@ -92,7 +92,7 @@ After finishing your required elements, you can push your work further. These go
 
 - [ ] Toggle form component for gluten free crust
 - [ ] Turn form element sections into nested routes
-- [ ] Test more of the application with Cypress
+- [x] Test more of the application with Cypress
 - [ ] Build UI for the eventuality of a network error when POSTing the order
 - [ ] Add functionality to your order button that it leads to a Congrats! Pizza is on it's way! page **and** returns a database record of the whole order
 
